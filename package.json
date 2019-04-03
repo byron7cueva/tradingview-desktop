@@ -4,7 +4,13 @@
   "description": "TradingView Desktop application",
   "main": "app/index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "npm run dist:mac && npm run dist:linux && npm run dist:win",
+    "dist:mac": "electron-builder --mac",
+    "dist:linux": "electron-builder --linux",
+    "dist:win": "electron-builder --win",
+    "postinstall": "electron-builder install-app-deps"
   },
   "repository": {
     "type": "git",
@@ -13,13 +19,54 @@
   "keywords": [
     "tradingview"
   ],
-  "author": "byron7cueva",
+  "author": "Byron Cueva <byron7cueva@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/byron7cueva/tradingview-desktop/issues"
   },
   "homepage": "https://github.com/byron7cueva/tradingview-desktop#readme",
   "devDependencies": {
-    "electron": "^4.1.3"
+    "electron": "^4.1.3",
+    "electron-builder": "^20.39.0"
+  },
+  "build": {
+    "appId": "com.byron7cueva.tradingview",
+    "files": [
+      "**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "dmg": {
+      "iconSize": 160,
+      "contents": [
+        {
+          "x": 180,
+          "y": 170
+        },
+        {
+          "x": 480,
+          "y": 170,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "category": "Utility",
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
   }
 }

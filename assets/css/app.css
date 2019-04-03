@@ -1,0 +1,35 @@
+.layout__area--top, .overflowWrap-PWdgT-U_-, .wrap-3tiHesTk- {
+    font-size: 12px !important;
+    height: 26px !important;
+}
+
+/*.layout__area--top {
+    left: 30px !important;
+}*/
+
+/*.layout__area--left,
+.layout__area--right,
+.widgetbar-tabs,
+.toolbar-1A0PjTA7-,
+.inner-1xuW-gY4-, .control-1TyEfSIx-, .button-263WXsg--, .isTransparent-sRmateFl- {
+    width: 30px !important;
+}*/
+
+.layout__area--center {
+    /*left: 30px !important;*/
+    top: 26px !important;
+}
+
+.symbol-list-item {
+    font-size: 10px !important;
+    height: 22px !important;
+}
+
+/*.widgetbar-handle {
+    position: absolute;
+    top: 0;
+    left: 12px;*/
+
+/*.chart-container {
+    width: 795px !important;
+}*/
