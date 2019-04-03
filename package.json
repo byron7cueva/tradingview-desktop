@@ -1,0 +1,25 @@
+{
+  "name": "tradingview-desktop",
+  "version": "1.0.0",
+  "description": "TradingView Desktop application",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byron7cueva/tradingview-desktop.git"
+  },
+  "keywords": [
+    "tradingview"
+  ],
+  "author": "byron7cueva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byron7cueva/tradingview-desktop/issues"
+  },
+  "homepage": "https://github.com/byron7cueva/tradingview-desktop#readme",
+  "devDependencies": {
+    "electron": "^4.1.3"
+  }
+}
