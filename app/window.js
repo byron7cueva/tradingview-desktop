@@ -35,12 +35,14 @@ class Window {
                 width: 800,
                 height: 600,
                 autoHideMenuBar: true,
-                defaultFontSize: 10
+                defaultFontSize: 10,
+                icon: path.join(__dirname, '../assets/img/icon.png'),
+                title: 'TradingView'
             });
             this[_window].on('closed', this[_onClosed].bind(this));
+            this[_window].maximize();
             this[_window].loadURL('https://es.tradingview.com/chart');
             this[_window].webContents.on('did-finish-load', this[_onDidFinishLoad].bind(this));
-            //this[_window].webContents.openDevTools();
         }
     }
 

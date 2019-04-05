@@ -31,10 +31,16 @@
   },
   "build": {
     "appId": "com.byron7cueva.tradingview",
+    "directories": {
+      "buildResources": "resources"
+    },
+    "productName":"TradingView",
     "files": [
-      "**/*"
+      "**/*",
+      "build/icon.*"
     ],
     "mac": {
+      "icon": "./build/256x256.png",
       "category": "public.app-category.productivity",
       "target": [
         "dmg",
@@ -42,6 +48,7 @@
       ]
     },
     "dmg": {
+      "icon": "./build/256x256.png",
       "iconSize": 160,
       "contents": [
         {
@@ -57,13 +64,15 @@
       ]
     },
     "linux": {
-      "category": "Utility",
+      "icon": "./build/256x256.png",
+      "category": "Finance Software",
       "target": [
         "AppImage",
         "deb"
       ]
     },
     "win": {
+      "icon": "./build/icon.ico",
       "target": [
         "nsis"
       ]
