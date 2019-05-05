@@ -43,6 +43,7 @@ class Window {
             this[_window].maximize();
             this[_window].loadURL('https://es.tradingview.com/chart');
             this[_window].webContents.on('did-finish-load', this[_onDidFinishLoad].bind(this));
+            //this[_window].webContents.openDevTools();
         }
     }
 

@@ -22,6 +22,7 @@
 
 .symbol-list-item {
     font-size: 10px !important;
+    font-weight: bolder;
     height: 22px !important;
 }
 
@@ -33,3 +34,35 @@
 /*.chart-container {
     width: 795px !important;
 }*/
+
+/* Tema Gris*/
+.widgetbar-tabs,
+.tv-floating-toolbar.ui-draggable,
+.group-2JyOhh7Z-,   
+.fill-1djIbBXv-,
+.chart-controls-bar,
+.widgetbar-pages,
+.group-wWM3zP_M-,
+.buttons-3g6HBgDg-,
+.tabbar-2RCzDuAv-,
+.widgetbar-wrap,
+.menuButtonWrap-2gKIb114-, .tab-1fqQ8BUy-,
+.menuButton-2evUotSx-, .title-1C5azoXt-,
+.title-rRMrIuI0-,
+.container-2MDVNuHv-,
+.tabs-3vAOgEVK-:not(.compact-27haUH_8-):after,
+.button-3SuA46Ww-, 
+.toolbar-1A0PjTA7-.isGrayed-1AzrEXYM-,
+.symbol-list-container
+{
+    /*background: #bdc3c7 !important; Gris*/
+    background: #2c2c54 !important;
+}
+
+._tv-dialog-content,
+.dialog-34XTwGTT-,
+.dialog-JRH26tka-, 
+.dialog-2APwxL3O-
+{
+    background: #303952 !important;
+}
