@@ -7,6 +7,7 @@ const path = require('path');
 const _window = Symbol('window');
 
 //Private methods
+const _onClose = Symbol('onClose');
 const _onClosed = Symbol('onClosed');
 const _onDidFinishLoad = Symbol('onDidFinishLoad');
 
@@ -32,19 +33,31 @@ class Window {
         //Validando si la ventana no exite para inicializarla
         if(this[_window] == null) {
             this[_window] = new BrowserWindow({
-                width: 800,
-                height: 600,
+                width: 1024,
+                height: 768,
+                minWidth: 800,
+                minHeight: 600,
                 autoHideMenuBar: true,
                 defaultFontSize: 10,
                 icon: path.join(__dirname, '../assets/img/icon.png'),
                 title: 'TradingView'
             });
+            this[_window].on('close', this[_onClose].bind(this));
             this[_window].on('closed', this[_onClosed].bind(this));
-            this[_window].maximize();
             this[_window].loadURL('https://es.tradingview.com/chart');
             this[_window].webContents.on('did-finish-load', this[_onDidFinishLoad].bind(this));
+            //this[_window].maximize();
             //this[_window].webContents.openDevTools();
         }
+    }
+
+    /**
+     * Trigger when close event produce
+     * @private
+     * @author byron7cueva
+     */
+    [_onClose]() {
+        this[_window].destroy();
     }
 
     /**
